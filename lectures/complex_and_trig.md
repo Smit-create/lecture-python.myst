@@ -102,7 +102,8 @@ We'll need the following imports:
 import matplotlib.pyplot as plt
 plt.rcParams["figure.figsize"] = (11, 5)  #set default figure size
 import numpy as np
-from sympy import *
+from sympy import (Symbol, symbols, Eq, nsolve, sqrt, cos, sin, simplify,
+                  init_printing, integrate)
 ```
 
 ### An Example
@@ -491,11 +492,10 @@ integrate(cos(ω) * sin(ω), (ω, -π, π))
 We invite the reader to verify analytically and with the `sympy` package the following two equalities:
 
 $$
-\int_{-\pi}^{\pi} \cos (\omega)^2 \, d\omega = \frac{\pi}{2}
+\int_{-\pi}^{\pi} \cos (\omega)^2 \, d\omega = \pi
 $$
 
 $$
-\int_{-\pi}^{\pi} \sin (\omega)^2 \, d\omega = \frac{\pi}{2}
+\int_{-\pi}^{\pi} \sin (\omega)^2 \, d\omega = \pi
 $$
-
 ```
